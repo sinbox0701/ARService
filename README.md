@@ -8,7 +8,7 @@ DB: Postgresql
 ## API
 - [x] Create Account
 - [x] Login
-- [ ] See Users (M/W)
+- [x] See Users (M/W)
 - [ ] See Profile
 - [ ] Call
 - [ ] Video Call
