@@ -6,8 +6,8 @@ Node + GraphQL + Prisma
 DB: Postgresql
 
 ## API
-- [ ] Create Account
-- [ ] Login
+- [x] Create Account
+- [x] Login
 - [ ] See Users (M/W)
 - [ ] See Profile
 - [ ] Call
