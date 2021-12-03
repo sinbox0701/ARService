@@ -9,7 +9,7 @@ DB: Postgresql
 - [x] Create Account
 - [x] Login
 - [x] See Users (M/W)
-- [ ] See Profile
+- [x] See Profile
 - [ ] Call
 - [ ] Video Call
 - [ ] see Notification
