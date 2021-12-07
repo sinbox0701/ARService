@@ -13,6 +13,7 @@ export default gql`
         bio: SEX!
         profile: String!
         intro: String!
+        isManaged: Boolean!
         createdAt: String! 
         updatedAt: String! 
     }
