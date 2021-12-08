@@ -16,10 +16,14 @@ DB: Postgresql
 - [x] Delete Notification (only Manager)
 - [x] Read Notifications
 - [x] Read Notification
-- [ ] Create Question
-- [ ] Delete Question
+- [x] Create Question
+- [x] Delete Question
+- [x] See Questions
+- [x] Read Question
 - [ ] Create Answer
 - [ ] Delete Answer
+- [ ] See Answers
+- [ ] Read Answer
 - [ ] Call
 - [ ] Video Call
 - [ ] see Notification
