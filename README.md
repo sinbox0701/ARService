@@ -20,10 +20,9 @@ DB: Postgresql
 - [x] Delete Question
 - [x] See Questions
 - [x] Read Question
-- [ ] Create Answer
-- [ ] Delete Answer
-- [ ] See Answers
-- [ ] Read Answer
+- [x] Create Answer
+- [x] Delete Answer
+- [x] See Answers
 - [ ] Call
 - [ ] Video Call
 - [ ] see Notification

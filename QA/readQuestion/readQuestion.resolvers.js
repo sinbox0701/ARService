@@ -5,12 +5,14 @@ export default {
     Query:{
         readQuestion:protectedResolver(async (_,{id},{loggedInUser})=>{
             if(!loggedInUser.id){
-                return {
-                    ok:false,
-                    error:"로그인 후 이용해주세요"
-                }
+                return null;
             }
-            return client.question.findUnique({where:{id}});
+            return client.question.findUnique({
+                where:{id},
+                include:{
+                    answer:true
+                }
+            });
         })
     }
 }

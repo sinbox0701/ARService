@@ -3,8 +3,8 @@ import { protectedResolver } from "../../User/User.utils";
 
 export default {
     Mutation:{
-        createQuestion:protectedResolver(async (_,__,{loggedInUser})=>{
-            const {title,answer} = args;
+        createQuestion:protectedResolver(async (_,args,{loggedInUser})=>{
+            const {title,content} = args;
             if(!loggedInUser.id){
                 return {
                     ok:false,
@@ -14,7 +14,7 @@ export default {
             const question = await client.question.create({
                 data:{
                     title,
-                    answer,
+                    content,
                     user:{
                         connect:{
                             id:loggedInUser.id

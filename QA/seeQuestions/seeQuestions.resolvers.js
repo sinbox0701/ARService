@@ -8,9 +8,12 @@ export default {
                 return null;
             }
             if(loggedInUser.isManaged){
-                return client.question.findMany({orderBy:{createdAt:'desc'}});
+                return client.question.findMany({orderBy:{updatedAt:'desc'}});
             }
-            return client.question.findMany({where:{userId:loggedInUser.id}});
+            return client.question.findMany({
+                where:{userId:loggedInUser.id},
+                orderBy:{updatedAt:'desc'}
+            });
         })
     }
 }
