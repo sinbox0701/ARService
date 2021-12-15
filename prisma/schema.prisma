@@ -38,6 +38,8 @@ model User {
   local String
   phone String
   email String
+  blacklist Boolean @default(false)
+  blId Int
   status Status @default(ACTIVATE)
   group Group @default(NORMAL)
   questions Question[]

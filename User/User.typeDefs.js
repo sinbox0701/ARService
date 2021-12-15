@@ -27,6 +27,7 @@ export default gql`
         local: String!
         phone: String!
         email: String!
+        blacklist: Boolean!
         group: Group!
         isManaged: Boolean!
         createdAt: String! 
