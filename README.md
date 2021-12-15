@@ -23,11 +23,14 @@ DB: Postgresql
 - [x] Create Answer
 - [x] Delete Answer
 - [x] See Answers
+- [x] see Notification
+- [X] Resign User
+- [ ] add "불량회원"
+- [ ] search User
+- [ ] computed field ==> 로그인 수, 마지막 로그인, 가입일
+- [ ] toggleAlarm
 - [ ] Call
 - [ ] Video Call
-- [ ] see Notification
-- [ ] toggleAlarm
 - [ ] add Point
 - [ ] change Point to Cash
-- [ ] create Question
 - [ ] 계좌이체

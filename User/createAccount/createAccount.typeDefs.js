@@ -11,7 +11,10 @@ export default gql`
             password: String!
             age: String!
             bio: SEX!
-            profile: Upload!
+            local: String!
+            email:String!
+            phone: String!
+            profile: Upload
             intro: String!
         ):CreateAccountResult!
     }

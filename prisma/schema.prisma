@@ -15,14 +15,31 @@ enum SEX {
   W
 }
 
+enum Status {
+  ACTIVATE
+  STOP
+  BLOCK
+}
+
+enum Group {
+  NORMAL
+  VIP
+  PARTTIME
+}
+
 model User {
   id Int @id @default(autoincrement())
   nickname String @unique()
   password String
   age String
   bio SEX
-  profile String
+  profile String?
   intro String
+  local String
+  phone String
+  email String
+  status Status @default(ACTIVATE)
+  group Group @default(NORMAL)
   questions Question[]
   isManaged Boolean @default(false)
   createdAt DateTime @default(now())

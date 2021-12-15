@@ -6,7 +6,7 @@ export default {
     Mutation:{
         createAccount: async (_,args) => {
             try {
-                const {nickname,age,bio,profile,intro,password} = args;
+                const {nickname,age,bio,profile,intro,password,local,email,phone} = args;
                 const user = await client.user.findFirst({
                     where:{nickname}
                 });
@@ -32,6 +32,9 @@ export default {
                             age,
                             bio,
                             intro,
+                            local,
+                            email,
+                            phone,
                             ...(hashedPassword && {password:hashedPassword}),
                             ...(profileUrl && {profile:profileUrl})
                         }
