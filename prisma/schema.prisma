@@ -31,7 +31,7 @@ model User {
   id Int @id @default(autoincrement())
   nickname String @unique()
   password String
-  age String
+  age Int
   bio SEX
   profile String?
   intro String
@@ -39,7 +39,7 @@ model User {
   phone String
   email String
   blacklist Boolean @default(false)
-  blId Int
+
   status Status @default(ACTIVATE)
   group Group @default(NORMAL)
   questions Question[]

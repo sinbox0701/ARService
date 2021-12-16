@@ -19,7 +19,7 @@ export default gql`
         id: Int! 
         nickname: String!
         password: String!
-        age: String!
+        age: Int!
         bio: SEX!
         profile: String
         intro: String!

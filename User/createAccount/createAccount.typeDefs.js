@@ -9,7 +9,7 @@ export default gql`
         createAccount(
             nickname: String!
             password: String!
-            age: String!
+            age: Int!
             bio: SEX!
             local: String!
             email:String!

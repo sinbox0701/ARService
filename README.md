@@ -26,7 +26,7 @@ DB: Postgresql
 - [x] see Notification
 - [X] Resign User
 - [x] toggleBlackList
-- [ ] search User
+- [x] search User
 - [ ] computed field ==> 로그인 수, 마지막 로그인, 가입일
 - [ ] toggleAlarm
 - [ ] Call
