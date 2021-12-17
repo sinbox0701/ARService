@@ -27,8 +27,8 @@ DB: Postgresql
 - [X] Resign User
 - [x] toggleBlackList
 - [x] search User
-- [ ] computed field ==> 로그인 수, 마지막 로그인, 가입일
-- [ ] toggleAlarm
+- [x] computed field ==> 로그인 수, 마지막 로그인, 가입일
+- [x] toggleAlarm
 - [ ] Call
 - [ ] Video Call
 - [ ] add Point

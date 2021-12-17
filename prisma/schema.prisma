@@ -39,11 +39,12 @@ model User {
   phone String
   email String
   blacklist Boolean @default(false)
-
   status Status @default(ACTIVATE)
   group Group @default(NORMAL)
   questions Question[]
   isManaged Boolean @default(false)
+  loginCount Int @default(0)
+  ignored Boolean @default(false)
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 }

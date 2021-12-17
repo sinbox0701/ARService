@@ -24,6 +24,15 @@ export default {
                     error:"비밀번호가 틀렸습니다!"
                 }
             }
+            await client.user.update({
+                where:{
+                    id:user.id
+                },
+                data:{
+                    loginCount:user.loginCount+1,
+                }
+            });
+
             const token = await jwt.sign({id:user.id},process.env.SECRET_KEY);
             if(token){
                 return{

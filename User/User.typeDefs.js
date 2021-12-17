@@ -30,6 +30,8 @@ export default gql`
         blacklist: Boolean!
         group: Group!
         isManaged: Boolean!
+        loginCount: Int!
+        lastLogin: String
         createdAt: String! 
         updatedAt: String! 
     }
