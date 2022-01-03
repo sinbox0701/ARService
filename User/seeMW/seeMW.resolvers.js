@@ -18,12 +18,14 @@ export default {
             if(user.bio === "M"){
                 return client.user.findMany({
                     where:{
+                        isManaged:false,
                         bio:"W"
                     }
                 })
             }else {
                 return client.user.findMany({
                     where:{
+                        isManaged:false,
                         bio:"M"
                     }
                 })
