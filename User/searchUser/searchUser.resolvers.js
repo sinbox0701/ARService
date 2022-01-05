@@ -17,8 +17,7 @@ export default {
                 const MIN = (createdMinY && createdMinM && createdMinD);
                 const createdMax = new Date(Number(createdMaxY),Number(createdMaxM)-1,Number(createdMaxD));
                 const MAX = (createdMaxY && createdMaxM && createdMaxD);
-                const CHECK = MIN || MAX;
-                
+                const CHECK = Boolean(MIN || MAX);
                 const users = await client.user.findMany({
                     where:{
                         ...(bio && {bio}),
