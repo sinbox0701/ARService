@@ -25,7 +25,8 @@ export default {
                             gte:(MIN ? createdMin : new Date()),
                             lte:(MAX ? createdMax : new Date())  
                         }}),
-                        ...((keyword) && (searchType ? Type[searchType] : Type[0]))
+                        ...((keyword) && (searchType ? Type[searchType] : Type[0])),
+                        isManaged:false
                     }
                 });
                 return users;
