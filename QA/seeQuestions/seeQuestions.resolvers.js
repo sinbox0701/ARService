@@ -8,11 +8,19 @@ export default {
                 return null;
             }
             if(loggedInUser.isManaged){
-                return client.question.findMany({orderBy:{updatedAt:'desc'}});
+                return client.question.findMany({
+                    orderBy:{updatedAt:'desc'},
+                    include:{
+                        user:true
+                    }
+                });
             }
             return client.question.findMany({
                 where:{userId:loggedInUser.id},
-                orderBy:{updatedAt:'desc'}
+                orderBy:{updatedAt:'desc'},
+                include:{
+                    user:true
+                }
             });
         })
     }
