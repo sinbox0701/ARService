@@ -32,6 +32,8 @@ export default gql`
         isManaged: Boolean!
         loginCount: Int!
         lastLogin: String
+        ignored: Boolean!
+        videoCall: Boolean!
         createdAt: String! 
         updatedAt: String! 
     }

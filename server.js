@@ -97,7 +97,9 @@ io.on('connection', (socket) => {
 
     socket.on('candidate', candidate => {
         console.log('candidate: ' + socket.id);
-
+        const startDate = new Date();
+        console.log(startDate);
+        // console.log(usersInThisRoom)
         socket.broadcast.emit('getCandidate', candidate)
     })
 
@@ -113,7 +115,10 @@ io.on('connection', (socket) => {
         }
 
         socket.broadcast.to(room).emit('user_exit', { id: socket.id });
+        console.log(users);
         console.log({ users })
+        const endDate = new Date();
+        console.log(endDate);
     })
 })
 
