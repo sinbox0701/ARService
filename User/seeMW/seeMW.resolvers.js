@@ -22,7 +22,7 @@ export default {
                         bio:"W"
                     },
                     orderBy:{
-                        createdAt
+                        createdAt:"desc"
                     }
                 })
             }else {
@@ -32,7 +32,7 @@ export default {
                         bio:"M"
                     },
                     orderBy:{
-                        createdAt
+                        createdAt:"desc"
                     }
                 })
             }
