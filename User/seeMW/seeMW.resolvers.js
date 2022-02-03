@@ -20,6 +20,9 @@ export default {
                     where:{
                         isManaged:false,
                         bio:"W"
+                    },
+                    orderBy:{
+                        createdAt
                     }
                 })
             }else {
@@ -27,6 +30,9 @@ export default {
                     where:{
                         isManaged:false,
                         bio:"M"
+                    },
+                    orderBy:{
+                        createdAt
                     }
                 })
             }
