@@ -44,8 +44,19 @@ model User {
   questions Question[]
   isManaged Boolean @default(false)
   loginCount Int @default(0)
+  pay Int @default(0)
   ignored Boolean @default(false)
   videoCall Boolean @default(true)
+  accountTransfers AccountTransfer[]
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model AccountTransfer {
+  id Int @id @default(autoincrement())
+  user User @relation(fields: [userId], references: [id], onDelete:Cascade)
+  userId Int
+  cash Int
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 }
