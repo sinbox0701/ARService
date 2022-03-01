@@ -3,7 +3,7 @@ import { protectedResolver } from "../../User/User.utils";
 
 export default {
     Query:{
-        seeQuestions:protectedResolver(async (_,__,{loggedInUser})=>{
+        seeQuestions:protectedResolver(async (_,{offset},{loggedInUser})=>{
             if(!loggedInUser.id){
                 return null;
             }
@@ -16,6 +16,8 @@ export default {
                 });
             }
             return client.question.findMany({
+                take:10,
+                skip:offset,
                 where:{userId:loggedInUser.id},
                 orderBy:{updatedAt:'desc'},
                 include:{

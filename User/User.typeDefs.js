@@ -31,6 +31,7 @@ export default gql`
         group: Group!
         isManaged: Boolean!
         loginCount: Int!
+        pay: Int!
         lastLogin: String
         ignored: Boolean!
         videoCall: Boolean!
