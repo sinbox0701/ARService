@@ -19,6 +19,7 @@ export default {
                     let profileUrl = null;
                     const hashedPassword = await bcrypt.hash(password,10);
                     if(profile){
+                        
                         const {filename, createReadStream} = await profile;
                         const newFileName = `${nickname}-${Date.now()}-${filename}`;
                         const rs = createReadStream();
