@@ -7,7 +7,7 @@ export default {
             const start = new Date(videoCall.startTime);
             const end = new Date(videoCall.endTime);
             const elapsedSec = (end.getTime()-start.getTime())/1000;
-            return elapsedSec;
+            return String(elapsedSec);
         } 
     }
 }

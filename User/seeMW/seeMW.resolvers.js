@@ -3,7 +3,7 @@ import { protectedResolver } from "../User.utils";
 
 export default {
     Query:{
-        seeMW: protectedResolver(async (_,{offset},{loggedInUser})=> {
+        seeMW: protectedResolver(async (_,__,{loggedInUser})=> {
             if(!loggedInUser.id){
                 return null;
             }
@@ -17,8 +17,7 @@ export default {
             }
             if(user.bio === "M"){
                 return client.user.findMany({
-                    take:10,
-                    skip:offset,
+                    
                     where:{
                         isManaged:false,
                         bio:"W"
@@ -29,8 +28,7 @@ export default {
                 })
             }else {
                 return client.user.findMany({
-                    take:10,
-                    skip:offset,
+                    
                     where:{
                         isManaged:false,
                         bio:"M"
